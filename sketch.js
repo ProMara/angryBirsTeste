@@ -8,9 +8,10 @@ var world;
 var caixa1, caixa2, caixa3, caixa4, caixa5, caixa6;
 var cenario;
 var player;
+var plataforma;
 
 function preload(){
-    cenario = loadImage("/sprites/cenario.png");
+    cenario = loadImage("cenario.png");
 }
 
 function setup() {
@@ -38,6 +39,8 @@ function setup() {
     
     solo = new Solo(600,395,1200,20);
 
+    plataforma = new Solo(150,305,300,170);
+
 
     rectMode(CENTER);
     ellipseMode(RADIUS);
@@ -63,7 +66,7 @@ function draw() {
     tronco4.show();
 
     player.show();
-
+    plataforma.show();
     solo.show()
     Motor.update(engine);
 
